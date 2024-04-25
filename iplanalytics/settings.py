@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-vtq5-e!@z7x2k=kg$d&gap@)=0*kaf6$@ney(ry1r_==oi4x^v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com', 'sportsanalyticsplatform.herokuapp.com']
 
 
 # Application definition
