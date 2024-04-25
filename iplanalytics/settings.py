@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-vtq5-e!@z7x2k=kg$d&gap@)=0*kaf6$@ney(ry1r_==oi4x^v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -122,6 +123,7 @@ STATICFILES_DIRS=[
 ]
 
 STATIC_ROOT=os.path.join(BASE_DIR,'assets')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MODEL_FILE_PATH = os.path.join(BASE_DIR, 'ipldata', 'raf.pkl')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
